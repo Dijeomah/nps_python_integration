@@ -63,10 +63,15 @@ async def send_payment(request: PaymentRequest):
             )
 
         # Generate unique IDs
-        msg_id = str(uuid.uuid4())
-        instr_id = f"INSTR-{msg_id[:8]}"
-        end_to_end_id = f"E2E-{msg_id[:8]}"
-        tx_id = f"TX-{msg_id[:8]}"
+        # msg_id = str(uuid.uuid4())
+        # instr_id = f"INSTR-{msg_id[:8]}"
+        # end_to_end_id = f"E2E-{msg_id[:8]}"
+        # tx_id = f"TX-{msg_id[:8]}"
+
+        msg_id = '99905820250721095222930239203831889'
+        instr_id = '99905899905720250721085722893090687'
+        end_to_end_id = '99905899905798653637383920281615142'
+        tx_id = '99905820250721095222930239203831889'
 
         logger.info(f"Processing payment - Message ID: {msg_id}")
 
@@ -78,7 +83,7 @@ async def send_payment(request: PaymentRequest):
             end_to_end_id=end_to_end_id,
             tx_id=tx_id,
             amount=f"{request.amount:.2f}",
-            settlement_date=datetime.utcnow().strftime('%Y-%m-%d'),
+            settlement_date= datetime.utcnow().strftime('%Y-%m-%d'),
             debtor_name=request.debtor_name,
             debtor_account=request.debtor_account,
             debtor_bvn=request.debtor_bvn,
