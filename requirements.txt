@@ -1,0 +1,20 @@
+# NPS Integration API Requirements
+
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# HTTP Client
+httpx==0.25.1
+
+# XML Processing
+lxml==4.9.3
+signxml==3.2.2
+
+# Cryptography
+cryptography==41.0.7
+
+# Optional: For development
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
