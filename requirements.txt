@@ -10,11 +10,9 @@ httpx==0.25.1
 
 # XML Processing
 lxml==4.9.3
-signxml==3.2.2
 
-# Cryptography
+# Cryptography (signxml removed - using direct implementation)
 cryptography==41.0.7
 
 # Optional: For development
-python-multipart==0.0.6
-python-jose[cryptography]==3.3.0
+python-multipart==0.0.19
