@@ -160,7 +160,8 @@ async def test_connection():
         async with httpx.AsyncClient(verify=False, timeout=10.0) as client:
             # Try to connect to the base URL
             response = await client.get(
-                f"{NPS_BASE_URL}/health",
+                # f"{NPS_BASE_URL}/health",
+                f"{NPS_BASE_URL}",
                 timeout=10.0
             )
 
